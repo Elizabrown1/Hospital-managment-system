@@ -1,0 +1,73 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><a class="navbar-brand" href="#!"><span style="color: #0038DC;">Psycho</span><span>logist</span></a></mat-toolbar>
+    <mat-nav-list class=" bold" style="font-weight: bolder;">
+      <a mat-list-item class="active" routerLink="/dashboards" style="color: #3F51B5;"><i class="fa fa-dashboard p-2" ></i>Dashboard</a>
+      <a mat-list-item routerLink="/admin" ><i class="fas fa-user-md p-2" ></i>Doctors</a>
+      <a mat-list-item routerLink="/user-dashboard"><i class="fa fa-wheelchair p-2"></i> Patient</a>
+      <a mat-list-item ><i class="fa fa-calendar p-2"></i>Appointment</a>
+      <a mat-list-item routerLink="/parent"><i class="fa fa-wheelchair p-2"></i>Doctor shcedule</a>
+      <a mat-list-item ><i class="fa fa-wheelchair p-2"></i>Departments</a>
+      <a mat-list-item ><i class="fa fa-wheelchair p-2" ></i>Settings</a>
+    </mat-nav-list>
+  </mat-sidenav> 
+  <mat-sidenav-content class="fixed-top">
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ ">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>newTodoList</span>
+       <!-- Avatar -->
+       <div class="dropdown ms-auto">
+        
+        <a
+          class="dropdown-toggle d-flex align-items-center hidden-arrow"
+          href=""
+          id="navbarDropdownMenuAvatar"
+          role="button"
+          data-mdb-toggle="dropdown"
+          aria-expanded="false"
+        >
+        
+          <img
+            src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+            class="rounded-circle"
+            height="25"
+            alt="Black and White Portrait of a Man"
+            loading="lazy"
+          />
+          <span class="text-white" style="text-decoration: none; border: none;">Admin</span>
+        </a>
+        
+      <!-- Right elements -->
+
+        <ul
+          class="dropdown-menu dropdown-menu-end"
+          aria-labelledby="navbarDropdownMenuAvatar" style="z-index: 1; position: relative;"
+        >
+          <li>
+            <a class="dropdown-item" href="#">My profile</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Settings</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
+    <!-- </div> -->
+    <!-- Right elements -->
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,292 @@
+<app-navbar></app-navbar>
+
+  <!--Main Navigation-->
+  <header>
+    <style>
+      /* Carousel styling */
+      #introCarousel,
+      .carousel-inner,
+      .carousel-item,
+      .carousel-item.active {
+        height: 90.5vh;
+      }
+
+      .carousel-item:nth-child(1) {
+        background-image: url('https://i.pinimg.com/564x/62/7b/f2/627bf2d5788e8207e79d48272a429a7f.jpg');
+        /* height: 100vh; */
+        width:100%;
+        /* background-repeat: no-repeat; */
+        /* background-size: cover; */
+        /* background-position: center top; */
+        
+      }
+
+      .carousel-item:nth-child(2) {
+        background-image: url('https://blog.boardvitals.com/wp-content/uploads/2019/08/medical-school-scholarships.jpg');
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+      }
+
+      .carousel-item:nth-child(3) {
+        background-image: url('https://zenonco.io/cancer/wp-content/uploads/2021/02/wysiwyg-uploads_1580196666465-doctor.jpg');
+        height: 100vh;
+        background-size: cover; 
+        background-position: top center;
+        background-repeat: no-repeat;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #introCarousel {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+      .hero {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+}
+
+.fade-carousel .carousel-inner .item .hero {
+    opacity: 0;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s; 
+}
+.fade-carousel .carousel-inner .item.active .hero {
+    opacity: 1;
+    -webkit-transition: 2s all ease-in-out .1s;
+       -moz-transition: 2s all ease-in-out .1s; 
+        -ms-transition: 2s all ease-in-out .1s; 
+         -o-transition: 2s all ease-in-out .1s; 
+            transition: 2s all ease-in-out .1s;    
+} 
+
+
+
+.hero h1 {
+    font-size: 3em;    
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-shadow: 4;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #080d15;
+    opacity: .1;
+} */
+
+
+/* .fade-carousel {
+    position: relative;
+    height: 90vh;
+} */
+.fade-carousel .carousel-inner .item {
+    height: 100vh;
+    
+}
+.fade-carousel .carousel-indicators > li {
+    /* margin: 0 2px; */
+    background-color: #0038DC;
+    border-radius: 100%;
+    top: -60px;
+    position: relative;
+    
+    /* border-color: #0038DC; */
+    
+    /* opacity: .7; */
+}
+/* .fade-carousel .carousel-indicators > li.active {
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+} */
+
+
+
+
+.btn.btn-lg {padding: 10px 40px;}
+.btn.btn-hero,
+.btn.btn-hero:hover,
+.btn.btn-hero:focus {
+    color: #f5f5f5;
+    background-color: #0038DC;;
+    border-color: #0038DC;;
+    outline: none;
+    margin: 20px auto;
+}
+    </style>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" >
+      <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand nav-link" target="_blank" href="https://mdbootstrap.com/docs/standard/">
+          <strong>MDB</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+          aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            
+          </ul>
+
+          <ul class="navbar-nav list-inline">
+            <!-- Icons -->
+            
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Carousel wrapper -->
+    <div id="introCarousel" class="carousel slide carousel-fade fade-carousel shadow-2-strong" data-mdb-ride="carousel">
+      <div class="overlay"></div>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="0" class="active"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="1"></li>
+        <li data-mdb-target="#introCarousel" data-mdb-slide-to="2"></li>
+      </ol>
+
+      <!-- Inner -->
+      <div class="carousel-inner">
+        <!-- Single item -->
+        <div class="carousel-item item slides active ">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="hero">
+                <div>
+                    <h1>
+                      The Most Valuable </h1>        
+                    <h3>Thing is Your Health</h3>
+                </div>
+                <button class="btn btn-hero btn-lg" role="button">See all features</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);">
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="hero">        
+                <div>
+                    <h1>We are smart</h1>        
+                    <h3>Get start your next awesome project</h3>
+                </div>       
+                <button class="btn btn-hero btn-lg" role="button">See all features</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Single item -->
+        <div class="carousel-item item">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.3);" >
+            <div class="d-flex justify-content-center align-items-center h-100">
+              <div class="hero">        
+                <div>
+                    <h1>We are amazing</h1>        
+                    <h3>Get start your next awesome project</h3>
+                </div>
+                <button class="btn btn-hero btn-lg" role="button">See all features</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Inner -->
+
+     
+    </div>
+    <!-- Carousel wrapper -->
+  </header>
+  <!--Main Navigation-->
+
+
+  <div class="container sub-div shadow bg-light" >
+    <div class="row p-4 sub">
+      <div class="col-md-4 d-flex mt-2">
+        <i class="fa-4x mx-5 my-4 fa-solid fa-square-phone" style="color: #0038DC;"></i>
+        <span class="text-dark my-4"><b>Emergency</b> <br> <br>
+          <span> +234 902 299 4974</span>
+          <span>+234 816 561 8949</span>
+        
+        </span>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <i class="fa-4x mx-5 my-4 fa-solid fa-location-dot"></i>
+        <span class="text-dark my-4"><b>Location</b> <br> <br>
+          <span>44 stadium road</span>
+          <span>Ogbomosho, Oyo state</span>
+          <span>Nigeria.</span>
+        
+        </span>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <i class="fa-4x mx-5 my-4 fa-solid fa fa-ambulance"></i>
+        <span class="text-dark my-4"><b>Location</b> <br> <br>
+          <span>44 stadium road</span>
+          <span>Ogbomosho, Oyo state</span>
+          <span>Nigeria.</span>
+        
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+

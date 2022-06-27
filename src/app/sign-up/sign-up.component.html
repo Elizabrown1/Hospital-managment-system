@@ -1,0 +1,209 @@
+<!-- <div class="col-6 bg-light align-center p-5 mx-auto mt-5 shadow" style="border-radius: 30px; margin-top: 60px; ">
+
+<form action="" [formGroup]="userForm" class="row g-3 needs-validation ">
+  <div class="col-md-4">
+    <label  class="form-label">name</label>
+    <input type="text" class="form-control"formControlName="name" 
+    [class.is-valid]="userForm.get('name')?.valid && userForm.get('name')"
+    [class.is-invalid]="userForm.get('name')?.invalid && userForm.get('name')">
+   
+    <div *ngIf="userForm.get('name')?.invalid">
+      <span class="text-danger" *ngIf="userForm.get('name')?.errors && userForm.get('name')">
+        Input can not be empty
+      </span>
+      
+  </div>
+  </div>
+
+  <div class="col-md-4">
+    <label  class="form-label">phone number</label>
+    <input type="text" class="form-control" formControlName="phone_no" formControlName="phone_no" 
+    [class.is-valid]="userForm.get('phone_no')?.valid && userForm.get('name')" 
+    [class.is-invalid]="userForm.get('phone_no')?.invalid && userForm.get('name')">
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+    <div *ngIf="userForm.get('phone_no')?.invalid">
+        <span *ngIf="userForm.get('phone_no')?.errors ?.['required'] && userForm.get('phone_no')?.touched">
+           Input can not be empty
+        </span>
+        <span *ngIf="userForm.get('phone_no')?.errors ?.['minLength']">
+            Minimum length is 4
+         </span>
+    </div>
+  </div>
+  
+  <div class="col-md-4">
+    <label for="validationCustomUsername" class="form-label">email</label>
+    <div class="input-group">
+      <span class="input-group-text" id="inputGroupPrepend">@</span>
+      <input type="text" class="form-control" id="validationCustomUsername" ormControlName="email" aria-describedby="inputGroupPrepend" required>
+      <div class="invalid-feedback">
+        Please choose a username.
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="validationCustom03" class="form-label">Address</label>
+    <input type="text" class="form-control" formControlName="name" id="validationCustom03" required>
+    <div class="invalid-feedback">
+      Please provide your address
+    </div>
+  </div>
+  <div class="col-md-3">
+    <label for="validationCustom04" class="form-label">State</label>
+    <select class="form-select" id="validationCustom04" required>
+      <option selected disabled value="">Choose...</option>
+      <option>...</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a valid state.
+    </div>
+  </div> -->
+  <!-- <div class="col-md-3">
+    <label for="validationCustom05" formControlName="password" class="form-label">password</label>
+    <input type="text" class="form-control" id="validationCustom05" required>
+    <div class="invalid-feedback">
+      Please provide a valid password
+    </div>
+  </div> -->
+  <!-- <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-outline-success" (click)="submitForm()" [disabled]="userForm.invalid" type="submit">Submit form</button>
+  </div>
+</form>
+</div>
+ -->
+
+
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start">
+    <style>
+      .cascading-right {
+        margin-right: -50px;
+      }
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4 ml-5">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-4 mb-5 mb-lg-0 ">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-3">Sign up now</h2>
+              <p class="text-danger text-center">{{errorMsg}}</p>
+              <form  #usersForm="ngForm">
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row">
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example1" class="form-control" [(ngModel)]="users.firstName" style="border-bottom: 2px solid #0038DC;" #userName="ngModel" minlength="4" required [class.is-invalid]="userName.invalid && userName.dirty" [class.is-valid]="userName.valid" name="name" appSignup/>
+                      <label class="form-label" for="form3Example1">First name</label>
+                    </div>
+                    <div *ngIf="userName.invalid && userName.dirty">
+                      <span class="text-danger" *ngIf="userName.errors?.['minLength']">Minimum length is 4</span>
+                      <span class="text-danger" *ngIf="userName.errors?.['lengthErr']">Minimum length is 14</span>
+                    </div>
+              
+                  </div>
+                  <div class="col-md-6 mb-4">
+                    <div class="form-outline">
+                      <input type="text" id="form3Example2" [(ngModel)]="users.lastName" class="form-control" style="border-bottom: 2px solid #0038DC;"   />
+                      <label class="form-label" for="form3Example2" >Last name</label>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3" [(ngModel)]="users.email" class="form-control" style="border-bottom: 2px solid #0038DC"  #number="ngModel" 
+                  [class.is-invalid]="number.invalid && number.dirty" 
+                  [class.is-valid]="number.valid" appSignup/>
+                  <label class="form-label" for="form3Example3">Email address</label>
+                </div>
+                <div *ngIf="number.invalid && number.dirty">
+                  <span class="text-danger" *ngIf="number.errors?.['minLength']">Minimum length is 4</span>
+                  <span class="text-danger" *ngIf="number.errors?.['lengthErr']">Minimum length is 14</span>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4" [(ngModel)]="users.password" class="form-control" style="border-bottom: 2px solid #0038DC"  />
+                  <label class="form-label" for="form3Example4">Password</label>
+                </div>
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" id="form3Example4" [(ngModel)]="confPassword" class="form-control" style="border-bottom: 2px solid #0038DC"  />
+                  <label class="form-label" for="form3Example4">Password</label>
+                </div>
+  
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-2">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+  
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-2"  (click)="signUp()"style="background-color: #0038DC;">
+                  Sign up
+                </button>
+  
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>or sign up with:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-google"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-twitter"></i>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp" class="w-75 rounded-4 shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->
+
+
+<!-- <div></div> -->
+
+
