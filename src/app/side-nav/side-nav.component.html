@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><a class="navbar-brand" href="#!"><span style="color: #3F51B5;">Psycho</span><span>logist</span></a></mat-toolbar>
+    <mat-nav-list class=" bold" style="font-weight: bolder;">
+       <a mat-list-item class="active" routerLink="/dashboard" style="color: #3F51B5;"><i class="fa fa-dashboard p-2" ></i>Dashboard</a>
+      <a mat-list-item routerLink="/admin" ><i class="fas fa-user-md p-2" ></i>Doctors</a>
+      <a mat-list-item routerLink="/user-dashboard"><i class="fa fa-wheelchair p-2"></i> Patient</a>
+      <a mat-list-item ><i class="fa fa-calendar p-2"></i>Appointment</a>
+      <a mat-list-item routerLink="/parent"><i class="fa fa-wheelchair p-2"></i>Doctor shcedule</a>
+      <a mat-list-item ><i class="fa fa-wheelchair p-2"></i>Departments</a>
+      <a mat-list-item ><i class="fa fa-wheelchair p-2" ></i>Settings</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>newTodoList</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+    <!-- Add Content Here -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
