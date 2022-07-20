@@ -17,3 +17,29 @@
     position: relative;
     z-index: 10;
   }
+
+  .page-footer h5{
+    color: white !important;
+  }
+
+  /* .navbar-nav a{
+   color: beige;
+  } */
+  .navbar-nav a:hover{
+    color: #007A64 !important;
+  }
+  .act{
+    color: #007A64 !important ;
+  }
+
+  #nav2.affix-top {
+    position: static;
+  }
+  #nav2.affix {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    transition: all .6s ease-in-out;
+    -webkit-transition: all .6s ease-in-out;
+ }

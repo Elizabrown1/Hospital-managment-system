@@ -18,6 +18,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { PatientDashboardComponent } from './patient-dashboard/patient-dashboard.component';
+import { PatientProfileComponent } from './patient-profile/patient-profile.component';
+import { DoctorsDetailsComponent } from './doctors-details/doctors-details.component';
+import { DoctorsComponent } from './doctors/doctors.component';
+import { CalenderComponent } from './calender/calender.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { MatListModule } from '@angular/material/list';
     UsersDashboardComponent,
     AdminComponent,
     HomeComponent,
-    SideNavComponent
+    SideNavComponent,
+    PatientDashboardComponent,
+    PatientProfileComponent,
+    DoctorsDetailsComponent,
+    DoctorsComponent,
+    CalenderComponent
   ],
   imports: [
     BrowserModule,

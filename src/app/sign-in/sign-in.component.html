@@ -1,114 +1,175 @@
+<input type="radio" checked id="toggle--login" name="toggle" class="ghost" />
+  <input type="radio" id="toggle--signup" name="toggle" class="ghost" />
 
+  <img class="logo framed"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Section: Design Block -->
-<section class="text-center text-lg-start">
-    <style>
-      .cascading-right {
-        margin-right: -50px;
-      }
-  
-      @media (max-width: 991.98px) {
-        .cascading-right {
-          margin-right: 0;
-        }
-      }
-    </style>
-  
-    <!-- Jumbotron -->
-    <div class="container py-4 align-items-center mx-auto" style="align-items: center;">
-        <a class="align-items-center " href="/home" >
-            <i class="fa fa-angle-left ml-4 mt-4 bg-light align-items-center text-center"  style="height: 30px; width: 30px; border-radius: 100%; font-size: large;"  aria-hidden="true"></i>
-            </a>
-      <div class="row g-0 align-items-center  m-auto">
-        <div class="col-lg-4  mb-lg-0 order-2 order-lg-1 ">
-          <div class="card cascading-right" style="
-              background: hsla(0, 0%, 100%, 0.55);
-              backdrop-filter: blur(30px);
-              ">
-            <div class="card-body p-5 shadow-5 text-center">
-              <h2 class="fw-bold mb-5">Sign In</h2>
-              <p class="text-danger text-center">{{errorMsg}}</p>
-              <!-- <form> -->
-               
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3" [(ngModel)]="user.email"class="form-control" style="border-bottom: 2px solid #2CAEE2;" name="email" />
-                  <label class="form-label" for="form3Example3">Email address</label>
-                </div>
-  
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4"  [(ngModel)]="user.password" class="form-control" style="border-bottom: 2px solid #2CAEE2;"  />
-                  <label class="form-label" for="form3Example4">Password</label>
-                </div>
-  
-                <!-- Checkbox -->
-                <div class="form-check d-flex justify-content-center mb-4">
-                    
-                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
-                  <label class="form-check-label" for="form2Example33">
-                    Subscribe to our newsletter
-                  </label>
-                </div>
-  
-                <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4" (click)="signIn()" style="background-color: #2CAEE2">
-                  Sign up
-                </button>
-                <!-- <p class=" pb-lg-2 text-white">Don't have an account? <a  
-                    style="color: #031956;" routerLink="/sign-up">Register here</a></p> -->
-  
-                <!-- Register buttons -->
-                <div class="text-center">
-                    <p class=" pb-lg-2 text-white"> <a  
-                        style="color: #2CAEE2;" routerLink="/sign-up">Register here</a></p>
-                  <p>or sign up with:</p>
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-facebook-f"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-google"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-twitter"></i>
-                  </button>
-  
-                  <button type="button" class="btn btn-link btn-floating mx-1">
-                    <i class="fab fa-github"></i>
-                  </button>
-                </div>
-              <!-- </form> -->
+  <form class="form form--login framed">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+          <div class="">
+              <div class="rounded border-white" style="border: 1px solid white; background-color: rgba(255,255,255,.3);">
+                  <div class="row no-gutters">
+                      <div class="col-xl-12">
+                          <div class="auth-form">
+            <div class="text-center mb-3">
+              <a href="index.html"><img src="images/logo-full.png" alt=""></a>
             </div>
+                              <h3 class="text-center bold mb-4 text-white"><strong>SIGN IN YOUR ACCOUNT</strong> </h3>
+                              <form action="index.html">
+                                  <div class="form-group">
+                                      <label class="mb-1 text-primary"><strong>Email</strong></label>
+                                      <input type="email" class="form-control rounded-3" value="hello@example.com">
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="mb-1 text-primary"><strong>Password</strong></label>
+                                      <input type="password" class="form-control rounded-4"  value="Password">
+                                  </div>
+                                  <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                                      <div class="form-group">
+                                         <div class="custom-control custom-checkbox ml-1 text-white">
+                    <input type="checkbox" class="custom-control-input" id="basic_checkbox_1">
+                    <label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
+                  </div>
+                                      </div>
+                                      <div class="form-group">
+                                          <a class="text-white" href="page-forgot-password.html">Forgot Password?</a>
+                                      </div>
+                                  </div>
+                                  <div class="text-center">
+                                      <button type="submit" class="btn bg-primary text-white btn-block rounded-3" style="border: none;">Sign Me In</button>
+                                  </div>
+                              </form>
+                              <div class="new-account mt-3">
+                                <label for="toggle--signup" class="text text--small text--centered">New? <b>Sign up</b></label>
+                                  <p class="text-white">Don't have an account? <a class="text-white" href="./page-register.html">Sign up</a></p>
+                                  <p class="text-white">Don't have an account? <a class="text-white" href="/sign-up">Sign up</a></p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-  
-        <div class="col-lg-6 g-0 mb-lg-0 order-1 order-lg-2">
-          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img4.webp" class="w-75 rounded-4 shadow-4"
-            alt="" />
-        </div>
       </div>
-    </div>
+  </div>
     
-    <!-- Jumbotron -->
-  </section>
-  <!-- Section: Design Block -->
+   
+  </form>
+  
+  <form class="form form--signup framed">
+    <!-- <h2 class="text text--centered text--omega">Join the other <b>152.6 million</b> blogs and<br>share all that you love.</h2> -->
+
+  
+      <div class="container">
+          <div class="row justify-content-center align-items-center">
+              <div class="">
+        
+        <div class="rounded border-primary"  style=" background-color: rgba(255,255,255,.4);">
+                      <div class="row no-gutters">
+                          <div class="col-xl-12">
+                              <div class="auth-form">
+                <div class="text-center mb-3">
+                  <a href="index.html"><img src="images/logo-full.png" alt=""></a>
+                </div>
+                                  <h3 class="text-center mb-4 text-white"><strong>SIGN UP YOUR ACCOUNT</strong></h3>
+                                  <form action="index.html">
+                                      <div class="form-group">
+                                          <label class="mb-1 text-primary"><strong>Username</strong></label>
+                                          <input type="text" class="form-control" placeholder="username">
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="mb-1 text-primary"><strong>Email</strong></label>
+                                          <input type="email" class="form-control" placeholder="hello@example.com">
+                                      </div>
+                                      <div class="form-group">
+                                          <label class="mb-1 text-primary"><strong>Password</strong></label>
+                                          <input type="password" class="form-control" value="Password">
+                                      </div>
+                                      <div class="text-center mt-4">
+                                          <button type="submit" class="btn bg-primary text-white btn-block" style="border: none;">Sign me up</button>
+                                      </div>
+                                  </form>
+                                  <div class="new-account mt-3">
+                                    <label for="toggle--login" class="text text--small text--centered">Not new? <b>Log in</b></label>
+                                      <p class="text-white">Already have an account? <a class="text-white" href="page-login.html">Sign in</a></p>
+                                     
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  
 
 
-<!-- <div></div> -->
+    <!-- <input type="email" placeholder="Email" class="input input--top" />
+    <input type="password" placeholder="Password" class="input" />
+    <input type="text" placeholder="Username" class="input" />
+    <input type="submit" value="Sign up" class="input input--submit" /> -->
+    
+    
+  </form>
 
+  <div class="legal">
+    <a class="text text--small text--border-right" href="javascript:;">Terms</a>
+    <a class="text text--small text--border-right" href="javascript:;">Privacy</a>
+    <a class="text text--small" href="javascript:;">Password help</a>
+  </div>
+
+  <div class="photo-cred">
+    <a class="text text--small" title="Check out their blog." href="http://cabinporn.com/post/125371354365/the-cabin-book-book-in-the-wild-21-in-the-us" target="_blank">Photo posted by <b>cabinporn</b></a>
+  </div>
+
+  <div class="fullscreen-bg" ></div>
+
+
+
+
+  <!-- <div class="container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+            <div class="rounded" style="border: 2px solid black; background-color: rgba(255,255,255,.4);">
+                <div class="row no-gutters">
+                    <div class="col-xl-12">
+                        <div class="auth-form">
+          <div class="text-center mb-3">
+            <a href="index.html"><img src="images/logo-full.png" alt=""></a>
+          </div>
+                            <h4 class="text-center mb-4 text-white">Sign in your account</h4>
+                            <form action="index.html">
+                                <div class="form-group">
+                                    <label class="mb-1 text-white"><strong>Email</strong></label>
+                                    <input type="email" class="form-control" value="hello@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label class="mb-1 text-white"><strong>Password</strong></label>
+                                    <input type="password" class="form-control" value="Password">
+                                </div>
+                                <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                                    <div class="form-group">
+                                       <div class="custom-control custom-checkbox ml-1 text-white">
+                  <input type="checkbox" class="custom-control-input" id="basic_checkbox_1">
+                  <label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
+                </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <a class="text-white" href="page-forgot-password.html">Forgot Password?</a>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn bg-white text-primary btn-block">Sign Me In</button>
+                                </div>
+                            </form>
+                            <div class="new-account mt-3">
+                                <p class="text-white">Don't have an account? <a class="text-white" href="./page-register.html">Sign up</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- </div> -->
+<!-- </div> -->
